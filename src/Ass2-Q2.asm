@@ -17,7 +17,7 @@ INCLUDELIB user32.lib
 .code
 main PROC
     mov  edx, OFFSET promptMsg    ; Display prompt message
-    call WriteString               ; Invoke Irvine32 WriteString to display prompt
+    call WriteString              ; Invoke Irvine32 WriteString to display prompt
 
     ; Read N
     call ReadInt                   ; Invoke Irvine32 ReadInt to read input
@@ -47,10 +47,10 @@ main PROC
         mov  edx, esi
         add  esi, ebx
         mov  ebx, edx
-        sub  ecx, 1                  ; Decrease the counter
 
         ; Check if there are more numbers to display
-        jnz  fibonacciLoop           ; Jump to the next iteration if ECX is not zero
+        sub  ecx, 1                  ; Decrease the counter
+        jge  fibonacciLoop           ; Jump to the next iteration if ECX is greater than or equal to zero
 
     call Crlf                       ; Move to the next line
 

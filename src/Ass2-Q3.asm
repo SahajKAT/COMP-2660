@@ -92,6 +92,7 @@ main PROC
     call WriteDec                    ; Display the length of the string
     mov  edx, OFFSET outputMsg5     ; Display the remaining part of the message
     call WriteString
+    call Crlf
 
     exit
 main ENDP
